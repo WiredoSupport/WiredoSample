@@ -1,0 +1,41 @@
+/* Add a black background color to the top navigation */
+.navbar {
+  background-color: #bdb5b5;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    color: #000000;
+    margin-inline: auto;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.navbar img {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+body {
+  background-image: url('./assets/Backgroud_map.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;                
+  margin: 0;            
+}
