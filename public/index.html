@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="app.css">
   <title>Wiredo Sample Page</title>
+  <link rel="stylesheet" href="app.css">
 </head>
 <body>
   <div class="navbar">
-    <img src="/assets/Truck_Logo.png" alt="Logo">
-    <a href="#home">Home</a>
-    <a href="#tracking">Tracking</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">
+    <img src="assets/Truck_Logo.png" alt="Wiredo Logo" class="navbar-logo">
+   </a>
+    <a href="contact.html">Contact Us</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="info.html">Information</a>
   </div>
 
-  <div class="Tracking_Search">
-    <a>Tracking Number</a>
-  </div>
-
-
+<div class="tracking-container">
+  <form action="/tracking.html" method="GET">
+    <input 
+      type="text" 
+      name="trackingNumber" 
+      placeholder="Enter your tracking number" 
+      class="tracking-input"
+      required
+    >
+    <button type="submit" class="tracking-button">Track</button>
+  </form>
+</div>
 </body>
 </html>

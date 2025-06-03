@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="app.css">
+  <title>Tracking - Wiredo</title>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html"><img src="assets/Truck_Logo.png" alt="Logo" class="navbar-logo"></a>
+    <a href="contact.html">Contact Us</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="info.html">Information</a>
+  </div>
+
+  <main class="tracking-page">
+    <div class="tracking-container">
+      <p id="trackingResult">Loading...</p>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const trackingNumber = params.get("trackingNumber");
+    const result = document.getElementById("trackingResult");
+
+    if (trackingNumber) {
+      result.textContent = `Tracking Number: ${trackingNumber}`;
+    } else {
+      result.textContent = "No tracking number provided.";
+    }
+  </script>
+</body>
+</html>
