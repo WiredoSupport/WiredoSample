@@ -1,0 +1,29 @@
+/* Make body take full height and use flex to push footer down */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push footer to bottom */
+.page-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #333;
+  color: white;
+}
+
+/* Left logo */
+.footer-left img {
+  height: 40px;
+}
+
+/* Right text */
+.footer-right p {
+  margin: 0;
+}
