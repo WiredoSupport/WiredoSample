@@ -72,20 +72,12 @@ function initAccordions() {
 
 function initContactForm() {
   const form = document.querySelector(".fill-form");
-  if (!form) return; // skip if the page isn't contact.html
+  if (!form) return;
 
   form.addEventListener("submit", function(e) {
     e.preventDefault();
-
-    const templateParams = {
-      name: form.name.value,
-      tracking_num: form["tracking-num"].value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value
-    };
-
-    emailjs.send("service_9u1wx9n", "template_dyuf60k", templateParams)
+    console.log("Sending form:", new FormData(form)); // For debugging
+    emailjs.sendForm("service_9u1wx9n", "template_dyuf60k", form)
       .then(() => {
         alert("Message sent successfully!");
         form.reset();
@@ -96,6 +88,7 @@ function initContactForm() {
       });
   });
 }
+
 
 
 
